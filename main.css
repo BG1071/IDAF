@@ -7,17 +7,28 @@ ul {
   }
   
   li {
-    float: left;
+    float: right;
   }
-  
-  li a {
+  #navbar a {
+    float: left;
     display: block;
-    color: white;
+    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 17px;
   }
 
   li a:hover {
     background-color: #111;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .content {
+    padding-top: 60px;
   }
