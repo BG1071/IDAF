@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" href="main.css">
-</head>
+   </head>
 <body>
    <div id="navbar">
       <ul>
@@ -16,10 +16,37 @@
       <li><a href="#news">News</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a class="active" href="main.html">Home</a></li>
-
-     
    </ul>
    </div>
+
+   <div id="videoBackground">
+      
+   <video autoplay muted loop id="myVideo">
+   <source src="Images/Videos/bgvideo.mp4" type="video/mp4">
+   Your browser does not support HTML5 video.
+   </video>
+ 
+   <div class="contentVideo">
+      <h1>Heading</h1>
+      <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+   </div>
+ 
+   <script>
+   var video = document.getElementById("myVideo");
+   var btn = document.getElementById("myBtnVid");
+ 
+   function myFunction() {
+      if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+   } else {
+      video.pause();
+      btn.innerHTML = "Play";
+   }
+ }
+ </script>
+   </div>
+
 
    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
 
