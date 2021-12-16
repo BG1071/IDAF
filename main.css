@@ -7,11 +7,12 @@ body{
       width: 100%;
       
       max-height: 100%;
-      background-color: #333;
+      background-color: rgb(65, 65, 65);
       color: white;
   }
   p{
       margin: 5px;
+      margin-bottom: 20px;
   }
 
   ul {
@@ -19,11 +20,15 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(44, 44, 44);
   }
-  
+  header{
+    margin: 0;
+  }
   li {
     float: right;
+    border:none;
+    margin: 0;
   }
   #navbar a {
     float: left;
@@ -34,10 +39,11 @@ body{
     text-decoration: none;
     font-size: 23px;
     z-index:1;
-    margin-bottom: 0px;
+    margin: 0px;
   }
   .navbar{
     z-index:1;
+    border:none;
   }
 
   li a:hover {
@@ -107,3 +113,100 @@ body{
     display: flex;
   }
   
+  body{
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .search-text {
+     padding-bottom: 60px;
+  }
+    
+  .search-text .input-search {
+    height: 45px;
+    width: 40%;
+    padding-left: 20px;
+      color: #333;
+  } 
+  
+  .search-text .btn-search {
+      background: #545454;
+      border: none;
+    color: #FFF;
+    height: 45px;
+      width: 80px;
+  }
+  
+  .search-text h4 {
+      color: #888582;
+      font-weight: 700;
+  }
+  
+  footer {
+    background-color: #222222;
+      padding: 60px 0px;
+  }
+  
+  footer ul{
+      list-style: none;
+      margin: 0 auto;
+      display: inline-block;
+      padding-top: 50px;
+  }
+  
+  footer ul li {
+      float: left;
+  }
+  
+  footer ul li a{
+    color: #b1aca1;
+      padding: 20px;
+  }
+  
+  footer ul li a:hover {
+    color: #7dabdb;
+    text-decoration: none;
+  }
+  
+  .footer-top {
+    padding-bottom: 50px;
+  }
+  
+  .footer-top .fa {
+      font-size: 8px;
+      color: #FFF;
+      padding-right: 10px;
+  }
+  
+  .footer-top a {
+      color: #FFF;
+      background: #333333; 
+      padding: 10px;
+  }
+  
+  .footer-top .col-lg-2:hover .fa, 
+  .footer-top .col-lg-2:hover a{
+      color: #7dabdb;
+    text-decoration: none;
+  }
+  
+  
+  .copyright p {
+    font-size: 12px;
+    padding: 15px 0 10px 0;
+  }
+  
+  #top {
+      color: #fff;
+      background: #7dabdb;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 40px;
+      height: 40px;
+      width: 40px;
+      right: 30px;
+      position: fixed;
+      border-radius: 3px;
+      text-align: center;
+      bottom: 350px;
+  
+}
