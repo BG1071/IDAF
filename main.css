@@ -1,206 +1,450 @@
-<!DOCTYPE html>
-<html lang="en">
+*{
+    margin: 0;
+    padding: 0;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="main.css">
-</head>
+html{
+    scroll-behavior: smooth;
+}
 
-<body>
-    <header id="header">
-        <div id="navbar">
-            <ul>
-                <li><a class="active" href="main.html">Image</a></li>
+body{
+    width: 100%;
+    background-color: rgb(92, 91, 91);
+    color: white;
+}
 
-                <li><a href="#news">Schweiz</a></li>
-                <li>
-                    <div  class="dropdown">
-                        <a id="dropbtn" href="#contact">Gefechte</a>
-                        <div class="dropdown-content">
-                            <a href="a">seite 1</a>
-                            <a href="a">seite 2</a>
-                            <a href="a">seite 3</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a class="active" href="main.html">Home</a></li>
-            </ul>
-        </div>
-    </header>
+p{
+    margin: 5px;
+    margin-bottom: 20px;
+    
+}
 
+/*Navbar*/
 
-    <div id="videoBackground">
-        <video autoplay muted loop id="myVideo">
-            <source src="bgvideo.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
+ul {
+    list-style-type: none;
+}
+header{
+    width: 100%;
+    height: 3.5vw;
+    display: block;
+    z-index: 1;
+    position: fixed;
+    background-color: rgb(44, 44, 44);
+}
 
-        <div class="contentVideo">
-            <h1>2. Weltkrieg</h1>
-            <h3>Militärische Aspekte des 2. Weltkrieges.</h3>
-        </div>
-        
-        <div id="arrowImgDiv" style='overflow:auto;'><img id="arrowImg" src="Images/Videos/arrow.png"></img></div>
+ul:first-child{
+    float: left;
+}
 
-        <div id="text">
-            <ul id="cards">
-                <li class="card" id="card_1">
-                    <div class="card__content">
-                        <div>
-                            <h2>Card One</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><a href="#top" class="btn btn--accent">Read more</a></p>
-                        </div>
-                        <figure>
-                            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-1.jpg"
-                                alt="Image description">
-                        </figure>
-                    </div>
-                </li>
-                <li class="card" id="card_2">
-                    <div class="card__content">
-                        <div>
-                            <h2>Card Two</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><a href="#top" class="btn btn--accent">Read more</a></p>
-                        </div>
-                        <figure>
-                            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg"
-                                alt="Image description">
-                        </figure>
-                    </div>
-                </li>
-                <li class="card" id="card_3">
-                    <div class="card__content">
-                        <div>
-                            <h2>Card Three</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><a href="#top" class="btn btn--accent">Read more</a></p>
-                        </div>
-                        <figure>
-                            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-3.jpg"
-                                alt="Image description">
-                        </figure>
-                    </div>
-                </li>
-                <li class="card" id="card_4">
-                    <div class="card__content">
-                        <div>
-                            <h2>Card Four</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><a href="#top" class="btn btn--accent">Read more</a></p>
-                        </div>
-                        <figure>
-                            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg"
-                                alt="Image description">
-                        </figure>
-                    </div>
-                </li>
-            </ul>
-            </main>
-        </div>
+li {
+    float: right;
+    border:none;
+    margin: 0;
+}
+.navbar{
+    width: 100%;
+    z-index:1;
+    
+    border:none;
+}
 
-        <script>
-            window.onscroll = function () { myFunction() };
-
-            var navbar = document.getElementById("navbar");
-            var sticky = navbar.offsetTop;
-
-            function myFunction() {
-                if (window.pageYOffset >= sticky) {
-                    navbar.classList.add("sticky")
-                } else {
-                    navbar.classList.remove("sticky");
-                }
-            }
-        </script>
-</body>
+#navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    font-size: 23px;
+    margin: 0px;
+}
 
 
-<footer>
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <div class="search-text">
-        <div class="container">
-            <div class="row text-center">
+li a:hover {
+    background-color: #111;
+}
 
-                <div class="form">
-                    <h4>SIGN UP TO OUR NEWSLETTER</h4>
-                    <form id="search-form" class="form-search form-horizontal">
-                        <input type="text" class="input-search" placeholder="Email Address">
-                        <button type="submit" class="btn-search">SUBMIT</button>
-                    </form>
-                </div>
+.sticky {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+}
 
-            </div>
-        </div>
-    </div>
+.sticky + .content {
+    padding-top: 60px;
+}
 
-    <div class="footer-top">
-        <div class="container">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
-                <a href="https://www.facebook.com/klaus.heinz.9678"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
-                <a href="https://twitter.com/explore"><i class="fa fa-twitter fa-2x"></i>Twitter</a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
-                <a href="https://www.flickr.com/"><i class="fa fa-flickr fa-2x"></i>Flickr</a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
-                <a href="https://www.tumblr.com/"><i class="fa fa-tumblr fa-2x"></i>Tumblr</a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
-                <a href="https://github.com/Amazingklaus49"><i class="fa fa-github fa-2x"></i>Github</a>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
-                <a href='https://mail.google.com/mail/'><i class="fa fa-google-plus fa-2x"></i>Google</a>
-            </div>
-        </div>
-    </div>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-    <div class="container" style="border-top:1px solid grey;">
-        <div class="row text-center">
-            <div class="col-lg-6 col-lg-offset-3">
-                <ul class="menu">
+.dropdown-content {
+    display: none;
+    position:absolute;
+    background-color: rgb(44, 44, 44);
+    color:white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Gefechte</a>
-                    </li>
+.dropdown-content a{
+    display: block;
+    z-index: 1;
+}
 
-                    <li>
-                        <a href="#">Schweiz</a>
-                    </li>
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+/*Video*/
+
+#myVideo {
+    z-index:-1;
+    position:relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 100%;
+    max-height:100%;;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.contentVideo {
+    position:relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.404);
+    color: #f1f1f1;
+    max-width: 100%;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: solid black;
+    font-size: 170%;
+    padding: 20px;
+    margin-top: -32%;
+}
+
+#myBtnVid {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtnVid:hover {
+    background: #ddd;
+    color: black;
+}
+#arrowImg{
+    display: unset;
+    max-width: 30%;
+}
+#arrowImgDiv{
+    margin-top: 32.5%;
+    margin-bottom: 5%;
+    margin-left: 45%;
+    margin-right: 25%;
+    display: flex;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
 
 
-<div class="copyright">
-    <div class="container">
 
-        <div class="row text-center">
-            <p>Copyright © 2021 All rights reserved</p>
-        </div>
+#top {
+    color: #fff;
+    background: #7dabdb;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    right: 30px;
+    position: fixed;
+    border-radius: 3px;
+    text-align: center;
+    bottom: 350px;
 
-    </div>
-</div>
+}
 
-<a href="#" id="top" style="display: inline;">
-    <i class="fa fa-arrow-up" aria-hidden="true"></i>
-</a>
+:root {
+    --card-height: 40vw;
+    --card-margin: 4vw;
+    --card-top-offset: 1em;
+    --numcards: 4;
+    --outline-width: 0px;
+}
 
-</html>
+#cards {
+    padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
+    margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+}
+
+#card_1 {
+    --index: 1;
+}
+
+#card_2 {
+    --index: 2;
+}
+
+#card_3 {
+    --index: 3;
+}
+
+#card_4 {
+    --index: 4;
+}
+
+.card {
+    position: sticky;
+    top: 0;
+    padding-top: calc(var(--index) * var(--card-top-offset));
+}
+
+@supports (animation-timeline: works) {
+
+    @scroll-timeline cards-element-scrolls-in-body {
+        source: selector(body);
+        scroll-offsets:
+            /* Start when the start edge touches the top of the scrollport */
+            selector(#cards) start 1,
+            /* End when the start edge touches the start of the scrollport */
+            selector(#cards) start 0
+        ;
+        start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
+        end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
+        time-range: 4s;
+    }
+
+    .card {
+        --index0: calc(var(--index) - 1); /* 0-based index */
+        --reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
+        --reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+    }
+    
+    .card__content {
+        transform-origin: 50% 0%;
+        will-change: transform;
+
+        --duration: calc(var(--reverse-index0) * 1s);
+        --delay: calc(var(--index0) * 1s);
+
+        animation: var(--duration) linear scale var(--delay) forwards;
+        animation-timeline: cards-element-scrolls-in-body;
+    }
+
+    @keyframes scale {
+        to {
+            transform:
+                scale(calc(
+                    1.1
+                    -
+                    calc(0.1 * var(--reverse-index))
+                ));
+        }
+    }
+}
+
+/** DEBUG **/
+
+#debug {
+position: fixed;
+top: 1em;
+left: 1em;
+}
+#debug::after {
+content: " Show Debug";
+margin-left: 1.5em;
+color: white;
+white-space: nowrap;
+}
+
+#debug:checked ~ main {
+--outline-width: 1px;
+}
+
+
+/** PAGE STYLING **/
+
+* { /* Poor Man's Reset */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#text {
+    margin-bottom: 200vw;
+    background: rgb(58 29 43);
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    font-size: calc(1em + 0.5vw);
+}
+
+#cards {
+    list-style: none;
+    outline: calc(var(--outline-width) * 10) solid blue;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--numcards), var(--card-height));
+    gap: var(--card-margin);
+}
+
+.card {
+    outline: var(--outline-width) solid hotpink;
+}
+
+.card__content {
+    box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+    background: rgb(206, 204, 204);
+    color: rgb(10, 5, 7);
+    border-radius: 1em;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas: "text img";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    align-items: stretch;
+    outline: var(--outline-width) solid lime;
+}
+
+.card__content > div {
+    grid-area: text;
+    width: 80%;
+    place-self: center;
+    text-align: left;
+
+    display: grid;
+    gap: 1em;
+    place-items: start;
+}
+
+.card__content > figure {
+    grid-area: img;
+    overflow: hidden;
+}
+
+.card__content > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 3.5em;
+}
+
+h2 {
+font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+p {
+font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    line-height: 1.42;
+}
+
+.btn {
+    background: rgb(188 87 36);
+    color: rgb(255 255 255);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+
+.search-text {
+    padding-bottom: 60px;
+}
+    
+.search-text .input-search {
+    height: 45px;
+    width: 40%;
+    padding-left: 20px;
+    color: #333;
+} 
+
+.search-text .btn-search {
+    background: #545454;
+    border: none;
+    color: #FFF;
+    height: 45px;
+    width: 80px;
+}
+
+.search-text h4 {
+    color: #888582;
+    font-weight: 700;
+}
+
+footer {
+    background-color: #222222;
+    padding: 60px 0px;
+}
+
+footer ul{
+    list-style: none;
+    margin: 0 auto;
+    display: inline-block;
+    padding-top: 50px;
+}
+
+footer ul li {
+    float: left;
+}
+
+footer ul li a{
+    color: #b1aca1;
+    padding: 20px;
+}
+
+footer ul li a:hover {
+    color: #7dabdb;
+    text-decoration: none;
+}
+
+.footer-top {
+    padding-bottom: 50px;
+}
+
+.footer-top .fa {
+    font-size: 8px;
+    color: #FFF;
+    padding-right: 10px;
+}
+
+.footer-top a {
+    color: #FFF;
+    background: #333333; 
+    padding: 10px;
+}
+
+.footer-top .col-lg-2:hover .fa, 
+.footer-top .col-lg-2:hover a{
+    color: #7dabdb;
+    text-decoration: none;
+}
+
+
+.copyright p {
+    font-size: 12px;
+    padding: 15px 0 10px 0;
+}
