@@ -94,3 +94,186 @@ li a:hover {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/*Footer*/
+h1 {
+    font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        font-size: 3.5em;
+    }
+    
+    h2 {
+    font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        font-size: 2.5em;
+    }
+    
+    p {
+    font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        line-height: 1.42;
+    }
+    
+    .btn {
+        background: rgb(188 87 36);
+        color: rgb(255 255 255);
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.5em;
+        border-radius: 0.25em;
+    }
+    
+    .search-text {
+        padding-bottom: 60px;
+    }
+        
+    .search-text .input-search {
+        height: 45px;
+        width: 40%;
+        padding-left: 20px;
+        color: #333;
+    } 
+    
+    .search-text .btn-search {
+        background: #545454;
+        border: none;
+        color: #FFF;
+        height: 45px;
+        width: 80px;
+    }
+    
+    .search-text h4 {
+        color: #888582;
+        font-weight: 700;
+    }
+    
+    footer {
+        background-color: #222222;
+        padding: 60px 0px;
+    }
+    
+    footer ul{
+        list-style: none;
+        margin: 0 auto;
+        display: inline-block;
+        padding-top: 50px;
+    }
+    
+    footer ul li {
+        float: left;
+    }
+    
+    footer ul li a{
+        color: #b1aca1;
+        padding: 20px;
+    }
+    
+    footer ul li a:hover {
+        color: #7dabdb;
+        text-decoration: none;
+    }
+    
+    .footer-top {
+        padding-bottom: 50px;
+    }
+    
+    .footer-top .fa {
+        font-size: 8px;
+        color: #FFF;
+        padding-right: 10px;
+    }
+    
+    .footer-top a {
+        color: #FFF;
+        background: #333333; 
+        padding: 10px;
+    }
+    
+    .footer-top .col-lg-2:hover .fa, 
+    .footer-top .col-lg-2:hover a{
+        color: #7dabdb;
+        text-decoration: none;
+    }
+    
+    .copyright p {
+        font-size: 12px;
+        padding: 15px 0 10px 0;
+    }
+
+    /*Text*/
+
+    #abstand{
+        margin-bottom: 100px;
+    }
+
+    #card1{     
+        width: 70%;
+        height: auto;
+        padding: 10px;
+        margin-left: 15%;
+        margin-bottom: 100px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        display: flex;
+        border: solid black 2px;
+        transition: 0.3s;
+        border-radius: 25px;
+    }     
+      #card1:hover {
+        background-color: black;
+          color: white;
+      }
+
+      .flex11{         
+          display: flex;
+          border-right: solid black 5px;
+          padding-right: 10px;
+          width: auto;
+          height: 25vw;
+      }
+
+      .flex12{
+          display: block;
+      }
+
+      #img1{
+        border-radius: 15px;
+      }
+
+      #card2{     
+        width: 70%;
+        height: auto;
+        padding: 10px;
+        margin-left: 15%;
+        margin-bottom: 100px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        display: flex;
+        border: solid black 2px;
+        transition: 0.3s;
+        border-radius: 25px;
+    }     
+      #card2:hover {
+          background-color: black;
+          color: white;
+      }
+
+      .flex21{         
+          display: flex;
+          border-left: solid black 5px;
+          padding-left: 10px;
+          width: auto;
+          height: 25vw;
+      }
+
+      .flex22{
+          display: block;
+      }
+
+      #img2{
+        border-radius: 15px;
+      }
+
+      
