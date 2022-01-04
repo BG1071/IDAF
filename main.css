@@ -181,8 +181,11 @@ body{
 }
 
 #cards {
-    padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
-    margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+    padding-bottom: calc(var(--numcards) * var(--card-top-offset)); 
+    margin-bottom: var(--card-margin); 
+    width: 80%;
+    margin-left: 10%;
+    background-color: rgb(92, 91, 91);
 }
 
 #card_1 {
@@ -280,7 +283,7 @@ white-space: nowrap;
 
 #text {
     margin-bottom: 12vw;
-    background: rgb(58 29 43);
+    background-color: rgb(92, 91, 91);
     color: rgb(255, 255, 255);
     text-align: center;
 
@@ -339,6 +342,7 @@ white-space: nowrap;
     object-fit: cover;
 }
 
+/*Footer*/
 h1 {
 font-family: 'Raleway', sans-serif;
     font-weight: 300;
