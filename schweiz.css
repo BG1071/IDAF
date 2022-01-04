@@ -17,6 +17,7 @@ body{
 p{
     margin: 5px;
     margin-bottom: 20px;
+    font-size: 19px;
     
 }
 
@@ -276,6 +277,13 @@ h1 {
 
       #img2{
         border-radius: 15px;
+      }
+
+      #img3{
+          margin-top: 28px;
+          height: auto;
+          width: 600px;
+          
       }
 
       .readmore:hover{
