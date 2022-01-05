@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    background-color: rgb(92, 91, 91);
+    color: white;
+}
+
+p{
+    margin: 5px;
+    margin-bottom: 20px;
+    
+}
+
+/*Navbar*/
+
+ul {
+    list-style-type: none;
+}
+
+header{
+    width: 100%;
+    height: 3.5vw;
+    display: block;
+    z-index: 1;
+    position: fixed;
+    background-color: rgb(44, 44, 44);
+}
+
+li {
+    float: right;
+    border:none;
+    margin: 0;
+}
+.navbar{
+    width: 100%;
+    z-index:1;
+    
+    border:none;
+}
+
+#navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    font-size: 23px;
+    margin: 0px;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.sticky {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position:absolute;
+    background-color: rgb(44, 44, 44);
+    color:white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    display: block;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Video*/
+
+#myVideo {
+    z-index:-1;
+    position:relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 100%;
+    max-height:100%;;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.contentVideo {
+    position:relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.404);
+    color: #f1f1f1;
+    max-width: 100%;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: solid black;
+    font-size: 170%;
+    padding: 20px;
+    margin-top: -32%;
+}
+
+#myBtnVid {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtnVid:hover {
+    background: #ddd;
+    color: black;
+}
+#arrowImg{
+    display: unset;
+    max-width: 30%;
+}
+#arrowImgDiv{
+    margin-top: 32.5%;
+    margin-bottom: 5%;
+    margin-left: 45%;
+    margin-right: 25%;
+    display: flex;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+#top {
+    color: #fff;
+    background: #7dabdb;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    right: 30px;
+    position: fixed;
+    border-radius: 3px;
+    text-align: center;
+    bottom: 350px;
+
+}
+
+:root {
+    --card-height: 40vw;
+    --card-margin: 4vw;
+    --card-top-offset: 1em;
+    --numcards: 4;
+    --outline-width: 0px;
+}
+
+#cards {
+    padding-bottom: calc(var(--numcards) * var(--card-top-offset)); 
+    margin-bottom: var(--card-margin); 
+    width: 80%;
+    margin-left: 10%;
+}
+
+#card_1 {
+    --index: 1;
+}
+
+#card_2 {
+    --index: 2;
+}
+
+#card_3 {
+    --index: 3;
+}
+
+#card_4 {
+    --index: 4;
+}
+
+.card {
+    position: sticky;
+    top: 0;
+    padding-top: calc(var(--index) * var(--card-top-offset));
+}
+
+@supports (animation-timeline: works) {
+
+    @scroll-timeline cards-element-scrolls-in-body {
+        source: selector(body);
+        scroll-offsets:
+            /* Start when the start edge touches the top of the scrollport */
+            selector(#cards) start 1,
+            /* End when the start edge touches the start of the scrollport */
+            selector(#cards) start 0
+        ;
+        start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
+        end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
+        time-range: 4s;
+    }
+
+    .card {
+        --index0: calc(var(--index) - 1); /* 0-based index */
+        --reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
+        --reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+    }
+    
+    .card__content {
+        transform-origin: 50% 0%;
+        will-change: transform;
+
+        --duration: calc(var(--reverse-index0) * 1s);
+        --delay: calc(var(--index0) * 1s);
+
+        animation: var(--duration) linear scale var(--delay) forwards;
+        animation-timeline: cards-element-scrolls-in-body;
+    }
+
+    @keyframes scale {
+        to {
+            transform:
+                scale(calc(
+                    1.1
+                    -
+                    calc(0.1 * var(--reverse-index))
+                ));
+        }
+    }
+}
+
+/** DEBUG **/
+
+#debug {
+position: fixed;
+top: 1em;
+left: 1em;
+}
+#debug::after {
+content: " Show Debug";
+margin-left: 1.5em;
+color: white;
+white-space: nowrap;
+}
+
+#debug:checked ~ main {
+--outline-width: 1px;
+}
+
+
+/** PAGE STYLING **/
+
+* { /* Poor Man's Reset */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#text {
+    margin-bottom: 12vw;
+    background-color: rgb(92, 91, 91);
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    font-size: calc(1em + 0.5vw);
+}
+
+#cards {
+    list-style: none;
+    outline: calc(var(--outline-width) * 10) solid blue;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--numcards), var(--card-height));
+    gap: var(--card-margin);
+}
+
+.card {
+    outline: var(--outline-width) solid hotpink;
+}
+
+.card__content {
+    box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+    background: rgb(206, 204, 204);
+    color: rgb(10, 5, 7);
+    border-radius: 1em;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas: "text img";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    align-items: stretch;
+    outline: var(--outline-width) solid lime;
+}
+
+.card__content > div {
+    grid-area: text;
+    width: 80%;
+    place-self: center;
+    text-align: left;
+
+    display: grid;
+    gap: 1em;
+    place-items: start;
+}
+
+.card__content > figure {
+    grid-area: img;
+    overflow: hidden;
+}
+
+.card__content > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Footer*/
+h1 {
+font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 3.5em;
+}
+
+h2 {
+font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+p {
+font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    line-height: 1.42;
+}
+
+.btn {
+    background: rgb(188 87 36);
+    color: rgb(255 255 255);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+
+.search-text {
+    padding-bottom: 60px;
+}
+    
+.search-text .input-search {
+    height: 45px;
+    width: 40%;
+    padding-left: 20px;
+    color: #333;
+} 
+
+.search-text .btn-search {
+    background: #545454;
+    border: none;
+    color: #FFF;
+    height: 45px;
+    width: 80px;
+}
+
+.search-text h4 {
+    color: #888582;
+    font-weight: 700;
+}
+
+footer {
+    background-color: #222222;
+    padding: 60px 0px;
+}
+
+footer ul{
+    list-style: none;
+    margin: 0 auto;
+    display: inline-block;
+    padding-top: 50px;
+}
+
+footer ul li {
+    float: left;
+}
+
+footer ul li a{
+    color: #b1aca1;
+    padding: 20px;
+}
+
+footer ul li a:hover {
+    color: #7dabdb;
+    text-decoration: none;
+}
+
+.footer-top {
+    padding-bottom: 50px;
+}
+
+.footer-top .fa {
+    font-size: 8px;
+    color: #FFF;
+    padding-right: 10px;
+}
+
+.footer-top a {
+    color: #FFF;
+    background: #333333; 
+    padding: 10px;
+}
+
+.footer-top .col-lg-2:hover .fa, 
+.footer-top .col-lg-2:hover a{
+    color: #7dabdb;
+    text-decoration: none;
+}
+
+
+.copyright p {
+    font-size: 12px;
+    padding: 15px 0 10px 0;
+}

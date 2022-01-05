@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Militärische Aspekte des 2. Weltkrieges</title>
+    <link rel="icon" type="image/x-icon" href="/favicon-32x32x.png">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header id="header">
+        <div id="navbar">
+            <ul>
+                <li><a href="schweiz.html">Schweiz</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a id="dropbtn" href="#contact">Gefechte</a>
+                        <div class="dropdown-content">
+                            <a href="dday.html">D-Day</a>
+                            <a href="ostfront.html">Ostfront</a>
+                            <a href="polen.html">Polenfeldzug</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div id="videoBackground">
+        <video autoplay muted loop id="myVideo">
+            <source src="bgvideo.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <div class="contentVideo">
+            <h1>2. Weltkrieg</h1>
+            <h3>Militärische Aspekte des 2. Weltkrieges.</h3>
+        </div>
+
+        <div id="arrowImgDiv" style='overflow:auto;'><img id="arrowImg" src="./arrow.png"></img></div>
+
+        <div id="text">
+            <ul id="cards">
+                <li class="card" id="card_1">
+                    <div class="card__content">
+                        <div>
+                            <p></p>
+                            <h2>Schweizer Réduit & Landesverteidigung</h2>
+                            <p></p>
+
+                            <p>Das Schweizer Réduit ist ein System aus militärischen Verteidigungsanlagen in den
+                                Schweizer Alpen.
+                                Während des Zweiten Weltkrieges wurde es zum Inbegriff des Widerstands der Schweiz gegen
+                                das Deutsche Reich – zum einen wegen ihres Widerstandswillens, zum anderen aufgrund der
+                                militärischen Widerstandsfähigkeit der Schweizer Armee im Alpenraum.</p>
+                            <p></p>
+                            <p><a href="schweiz.html" class="btn btn--accent">Read more</a></p>
+                        </div>
+                        <figure>
+                            <img style="height: autp;" src="reduit.jpg" alt="Image description">
+                        </figure>
+                    </div>
+                </li>
+                <li class="card" id="card_2">
+                    <div class="card__content">
+                        <div>
+                            <p></p>
+                            <h2>Operation Overlord</h2>
+                            <p>
+                            </p>
+                            <p>Landung in der Normandie, Operation Overload oder
+                                D-Day! Was auch immer Sie sagen, lassen Sie uns
+                                einen genaueren Blick auf diese blutige Front werfen, die eine wichtige Rolle im
+                                Schicksal des
+                                Zweiten Weltkriegs spielte, mit Filmen, Serien und sogar Videospielen, die zu seinem
+                                Gedenken
+                                produziert wurden!</p>
+                                <p></p>
+                                <p></p>
+                            <p></p>
+                            <p><a href="dday.html" class="btn btn--accent">Read more</a></p>
+                        </div>
+                        <figure>
+                            <img src="Dday.jpg" alt="Image description">
+                        </figure>
+                    </div>
+                </li>
+                <li class="card" id="card_3">
+                    <div class="card__content">
+                        <div>
+                            <p></p>
+                            <h2>Ostfront</h2>
+                            <p></p>
+                            <p></p>
+                            <p>Es ist mehr als eine Fassade; Werfen wir einen Blick auf die Schlacht von Stalingrad, die den Zweiten Weltkrieg fast beendet hätte</p>
+                            <p><a href="ostfront.html" class="btn btn--accent">Read more</a></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <figure>
+                            <img src="./1..jpg"
+                                alt="Image description">
+                        </figure>
+                    </div>
+                </li>
+                <li class="card" id="card_4">
+                    <div class="card__content">
+                        <div>
+                            <p></p>
+                            <h2>Polenfeldzug</h2>
+                            <p></p>
+                                <p></p>
+                            <p></p>
+                            <p>Deutsche Truppen marschierten am 1. September 1939 in Polen ein und begannen den Zweiten Weltkrieg.
+                                Als Reaktion auf den deutschen Angriff erklärten Großbritannien und Frankreich Nazi-Deutschland den
+                                Krieg.</p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                            <p><a href="polen.html" class="btn btn--accent">Read more</a></p>
+                        </div>
+                        <figure>
+                            <img src="polen.jpeg"
+                                alt="Image description">
+                        </figure>
+                    </div>
+                </li>
+            </ul>
+            </main>
+        </div>
+
+        <script>
+            window.onscroll = function () { myFunction() };
+
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+        </script>
+</body>
+
+
+<footer>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <div class="search-text">
+        <div class="container">
+            <div class="row text-center">
+
+                <div class="form">
+                    <h4>SIGN UP TO OUR NEWSLETTER</h4>
+                    <form id="search-form" class="form-search form-horizontal">
+                        <input type="text" class="input-search" placeholder="Email Address">
+                        <button type="submit" class="btn-search">SUBMIT</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                <a href="https://www.facebook.com/klaus.heinz.9678"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                <a href="https://twitter.com/explore"><i class="fa fa-twitter fa-2x"></i>Twitter</a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                <a href="https://www.flickr.com/"><i class="fa fa-flickr fa-2x"></i>Flickr</a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                <a href="https://www.tumblr.com/"><i class="fa fa-tumblr fa-2x"></i>Tumblr</a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                <a href="https://github.com/Amazingklaus49"><i class="fa fa-github fa-2x"></i>Github</a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                <a href='https://mail.google.com/mail/'><i class="fa fa-google-plus fa-2x"></i>Google</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="border-top:1px solid grey;">
+        <div class="row text-center">
+            <div class="col-lg-6 col-lg-offset-3">
+                <ul class="menu">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="dday.html">Gefechte</a>
+                    </li>
+
+                    <li>
+                        <a href="schweiz.html">Schweiz</a>
+                    </li>
+
+                    <li>
+                        <a href="quellen.html">Quellen</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div class="copyright">
+    <div class="container">
+
+        <div class="row text-center">
+            <p>Copyright © 2021 All rights reserved</p>
+        </div>
+
+    </div>
+</div>
+
+<a href="#" id="top" style="display: inline;">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</a>
+
+</html>
