@@ -287,6 +287,13 @@ h1 {
           width: 600px;
           
       }
+ 
+      video{
+        width: 80%; /*or whatever % you prefer*/
+        margin: 0 auto;
+        display: block;
+      }
+
 
       .readmore:hover{
           color: red;
